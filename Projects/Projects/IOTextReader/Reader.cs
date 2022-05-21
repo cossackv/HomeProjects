@@ -21,6 +21,16 @@ namespace Projects.IOTextReader
                 _textFromFile = System.IO.File.ReadAllText(@"C:\Users\dmytr\source\repos\HomeProjects\Projects\Projects\IOTextReader\Example.txt");
         }
 
+        #region RemoveChr
+        /// <summary>
+        /// Removes all special symbols except letters from a string sequence
+        /// </summary>
+        public string RmvChr()
+        {
+            return _cleanStr = _editString.Replace('.', ' ').Replace('?', ' ').Replace(',', ' ').Replace('!', ' ').Replace(' ', ' ').Replace('-', ' ').Replace('@', ' ').Replace(';', ' ').Replace(':', ' ').Replace('…', ' ').Replace('–', ' ');
+        }
+        #endregion
+
         #region CleanArrayFromFile
         /// <summary>
         /// Returns an array of words without extra characters
@@ -31,9 +41,9 @@ namespace Projects.IOTextReader
 
             _editString = _textFromFile.Replace("\r", "").Replace("\n", "").ToLower();
 
-            _cleanStr = _editString.Replace('.', ' ').Replace('?', ' ').Replace(',', ' ').Replace('!', ' ').Replace(' ', ' ').Replace('-',' ').Replace('@', ' ').Replace(';', ' ').Replace(':', ' ').Replace('…', ' ').Replace('-', ' ');
+            _cleanStr = RmvChr();
 
-           _cleanArray = _cleanStr.Split(' ').Where(s => !string.IsNullOrEmpty(s)).ToArray();
+            _cleanArray = _cleanStr.Split(' ').Where(s => !string.IsNullOrEmpty(s)).ToArray();
 
             return _cleanArray;
         }
