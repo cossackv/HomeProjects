@@ -16,6 +16,7 @@ namespace Projects.IOTextReader
             var strResult = reader.DictToStr(dc);
             File.WriteAllText(@"C:\Users\dmytr\source\repos\HomeProjects\Projects\Projects\IOTextReader\Result.txt", strResult);
             
+            
         }
     }
 }

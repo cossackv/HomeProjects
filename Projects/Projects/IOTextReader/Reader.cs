@@ -80,11 +80,9 @@ namespace Projects.IOTextReader
             StringBuilder keyValueBox = new StringBuilder();
             foreach (var keyValue in resultTable)
             {
-                keyValueBox.Append(keyValue.Key).Append(":").Append(keyValue.Value).Append(',');
+                keyValueBox.Append(keyValue.Key).Append(keyValue.Value);
             }
             string result = keyValueBox.ToString();
-
-            //result = result.TrimEnd(',');
             return result;
         }
 
