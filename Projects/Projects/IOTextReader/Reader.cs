@@ -88,15 +88,15 @@ namespace Projects.IOTextReader
 
         #endregion
 
-        #region ExportToFile
-        /// <summary>
-        /// Export string to Result.txt 
-        /// </summary>
-        public static async Task PrintToFile(string str)
-        {
-            await File.WriteAllTextAsync("Result1.txt", str);
-        }
-        #endregion
+        //#region ExportToFile
+        ///// <summary>
+        ///// Export string to Result.txt 
+        ///// </summary>
+        //public static async Task PrintToFile(string str)
+        //{
+        //    await File.WriteAllTextAsync("Result1.txt", str);
+        //}
+        //#endregion
 
     }
 }
