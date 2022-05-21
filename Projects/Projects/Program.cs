@@ -7,7 +7,7 @@ namespace Projects
     {
         static void Main(string[] args)
         {
-            
+           RunApp.RunIOTextReader();
         }
     }
 }
