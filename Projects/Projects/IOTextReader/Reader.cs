@@ -84,7 +84,7 @@ namespace Projects.IOTextReader
             }
             string result = keyValueBox.ToString();
 
-            result = result.TrimEnd(',');
+            //result = result.TrimEnd(',');
             return result;
         }
 
