@@ -31,7 +31,7 @@ namespace Projects.IOTextReader
 
             _editString = _textFromFile.Replace("\r", "").Replace("\n", "").ToLower();
 
-            _cleanStr = _editString.Replace('.', ' ').Replace('?', ' ').Replace(',', ' ').Replace('!', ' ').Replace(' ', ' ');
+            _cleanStr = _editString.Replace('.', ' ').Replace('?', ' ').Replace(',', ' ').Replace('!', ' ').Replace(' ', ' ').Replace('-',' ').Replace('@', ' ').Replace(';', ' ').Replace(':', ' ').Replace('…', ' ').Replace('-', ' ');
 
            _cleanArray = _cleanStr.Split(' ').Where(s => !string.IsNullOrEmpty(s)).ToArray();
 
