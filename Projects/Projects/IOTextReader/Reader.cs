@@ -48,7 +48,7 @@ namespace Projects.IOTextReader
 
             _editString = _textFromFile.Replace("\r", "").Replace("\n", "").ToLower();
 
-            _cleanStr = RmvChr();
+            _cleanStr = Filter(_editString);
 
             _cleanArray = _cleanStr.Split(' ').Where(s => !string.IsNullOrEmpty(s)).ToArray();
 
