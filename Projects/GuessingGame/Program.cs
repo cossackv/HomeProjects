@@ -12,7 +12,7 @@ namespace GuessingGame
                 new SimplePlayer(),
                 new RandomPlayer(),
                 new RandomSmartPlayer(),
-                new RandomCheaterPlayer()
+                //new RandomCheaterPlayer()
                 
             };
             Game game = new Game(players);
