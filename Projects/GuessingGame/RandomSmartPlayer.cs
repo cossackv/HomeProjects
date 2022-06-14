@@ -27,6 +27,7 @@ namespace GuessingGame
                 if (!setOfNumbers.Contains(num))
                 {
                     setOfNumbers.Add(num);
+                    Console.WriteLine($"RandomSmartPlayer Guessed {num} ");
                 }
                 else
                 {
@@ -38,9 +39,7 @@ namespace GuessingGame
                     Console.WriteLine($"{Name}, founded value first! It is {ResultValue = MinMax.SearchValue}");
                     break;
                 }
-
-                Console.WriteLine($"RandomSmartPlayer Guessed {num} ");
-                    
+  
                 lock (_lock)
                 {
                     MinMax.GuessedNumbers.Add(num);
