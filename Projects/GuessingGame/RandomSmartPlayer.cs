@@ -15,11 +15,11 @@ namespace GuessingGame
             Name = "RandomSmartPlayer";
         }
 
-        public override Task RollNumbers(CancellationToken cancellationToken)
+        public override Task RollNumbers(CancellationToken cts)
         {
             var rnd = new Random();
             
-            while (!cancellationToken.IsCancellationRequested)
+            while (!cts.IsCancellationRequested)
             {
 
                 var num = rnd.Next(MinMax.Min, MinMax.Max);

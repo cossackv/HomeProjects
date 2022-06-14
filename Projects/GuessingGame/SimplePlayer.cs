@@ -14,10 +14,10 @@ namespace GuessingGame
             Name = "SimplePlayer";
         }
 
-        public override Task RollNumbers(CancellationToken cancellationToken)
+        public override Task RollNumbers(CancellationToken cts)
         {
             int current = MinMax.Min;
-            while (!cancellationToken.IsCancellationRequested)
+            while (!cts.IsCancellationRequested)
             {
                 lock (locker)
                 {
@@ -32,7 +32,7 @@ namespace GuessingGame
                 }
 
                 current++;
-                Thread.Sleep(10);
+                Thread.Sleep(100);
             }
 
             return Task.CompletedTask;

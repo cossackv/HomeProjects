@@ -10,7 +10,7 @@ namespace GuessingGame
 {
     public class Game
     {
-        private readonly CancellationTokenSource _cancellationToken = new();
+        private readonly CancellationTokenSource cts = new();
         private readonly Player[] _players;
 
         public Game(Player[] players)
@@ -28,11 +28,11 @@ namespace GuessingGame
 
             if (_players.Length > 0)
             {
-                tasks.AddRange(_players.Select(player => Task.Factory.StartNew(() => player.RollNumbers(_cancellationToken.Token))));
+                tasks.AddRange(_players.Select(player => Task.Factory.StartNew(() => player.RollNumbers(cts.Token))));
             }
 
             Task.WaitAny(tasks.ToArray());
-            _cancellationToken.Cancel();
+            cts.Cancel();
             watch.Stop();
             Console.WriteLine();
             Console.WriteLine("Operation time in milliseconds: " + watch.ElapsedMilliseconds);
