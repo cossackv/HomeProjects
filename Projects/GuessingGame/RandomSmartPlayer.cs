@@ -45,7 +45,7 @@ namespace GuessingGame
                     MinMax.GuessedNumbers.Add(num);
                 }
 
-                Thread.Sleep(100);
+                //Thread.Sleep(100);
             }
 
             return Task.CompletedTask;

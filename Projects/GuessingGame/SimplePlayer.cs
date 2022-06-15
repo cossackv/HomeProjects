@@ -21,9 +21,7 @@ namespace GuessingGame
             {
                 lock (locker)
                 {
-                    
-                    Console.WriteLine($"SimplePlayer guessed {current}");
-                    
+                    Console.WriteLine($"SimplePlayer guessed {current}");   
                 }
                 if (current == MinMax.SearchValue)
                 {
@@ -32,7 +30,7 @@ namespace GuessingGame
                 }
 
                 current++;
-                Thread.Sleep(100);
+                //Thread.Sleep(10);
             }
 
             return Task.CompletedTask;
