@@ -12,7 +12,7 @@ namespace GuessingGame
         public static int Max;
         public static int SearchValue;
         public static HashSet<int> GuessedNumbers = new();
-        public static bool Found;
+        
 
         public static void GetMinMax()
         {

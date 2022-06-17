@@ -25,12 +25,9 @@ namespace GuessingGame
                     Console.WriteLine($"{Name}, founded value first! It is {ResultValue = MinMax.SearchValue}");
                     break;
                 }
-
                 
                 Console.WriteLine($"RandomPlayer Guessed {num} ");
                
-
-
                 lock (_lock)
                 {
                     MinMax.GuessedNumbers.Add(num);

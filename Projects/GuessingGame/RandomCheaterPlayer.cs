@@ -26,7 +26,10 @@ namespace GuessingGame
 
                 if (!cheaterSet.Contains(num) && !MinMax.GuessedNumbers.Contains(num))
                 {
-                    cheaterSet.Add(num);
+                    lock (_lock)
+                    {
+                        cheaterSet.Add(num);
+                    }
                     Console.WriteLine($"Cheater Guessed {num}");
                 }
 
