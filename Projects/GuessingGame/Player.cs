@@ -7,7 +7,7 @@ namespace GuessingGame
 {
     public abstract class Player
     {
-        public string Name;
+        protected string Name;
         public static int ResultValue;
         public abstract Task RollNumbers(CancellationToken cancellationToken);
 
